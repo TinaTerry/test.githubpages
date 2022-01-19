@@ -1,0 +1,393 @@
+:filename: chapter/01_Installation_SATLITE.adoc
+ifndef::imagesdir[:imagesdir: ../resources]
+:xrefstyle:
+
+== Installation of SATLITE
+
+
+=== Quick Facts
+
+[width="100%",cols="30%,70%",]
+|===
+|*Current Version* |SATLITE 1.3.0
+|*Release-Date* |17.12.2021
+|*Download* |https://devstack.vwgroup.com/artifactory/webapp/#/artifacts/browse/simple/General/adapmt-mt7-workflows/Tools/SATLITE_v1.3.0.zip[Artifactory]
+|*Access Permisson Problems* |Contact https://devstack.vwgroup.com/confluence/display/~u6bbh3y[Koenig, Alexander (G3-74)]
+|*Versioning* a|
+Major.Minor.Patch
+
+Major: Not downward compatible (e.g. V1.0.0 is not compatible with V2.0.0)
+
+Minor: New Features added
+
+Patch: Bugfixes resolved
+
+|===
+
+=== Changelog
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.3.0 START TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+.*Click here for Changlog - SATLITE 1.3.0*
+[%collapsible]
+====
+
+[width="100%",cols="29%,71%",options="header",]
+|===
+| |SATLITE 1.3.
+|*New Features* a|
+* Renaming
+    ** "`Test Instance`" -> "`Test Environment`"
+    ** "`Label (LBL_)`" -> "`Human Input (HI_)`"
+* Requirement: Every test case in a test catalogue needs a unique ID
+* Refinement of the SATLITE Testing DSL
+    ** "`Wait`" is an own test step
+    ** Conditional expressions possible within the duration of expected results
+* Test Environment
+    ** Definition of arbitrary number of test instances with individual naming possible
+    ** Dynamic addition, duplication and deletion possible
+* Introduction of "`Macro`" definition
+* Introduction of an interval definition like ("`AL_Example(1,15)`" or "`AL_Example[1,15)`" )
+* XLSX-export replaces CSV-export
+* Test case XLSX-import improvements due to user feedback
+* Modification of the JSON export structure and extension with additional information
+* Loading bar during startup
+
+|*Resolved Bugs* a|
+* XLSX-import of test cases for the aLDW test catalogue
+* Assignment ( := ) expression allowed in SATLITE Testing DSL
+* User is not allowed to write free text in the SATLITE Testing DSL
+* Removed test step numbering in global condition
+* Errors that do not result from a wrong specification are no longer displayed
+
+|*Deprecated Features* a|
+* Python Script Definition
+* Function Definition
+
+|===
+====
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.3.0  END TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.2.1 START TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+.*Click here for Changlog - SATLITE 1.2.1*
+[%collapsible]
+====
+
+[width="100%",cols="29%,71%",options="header",]
+|===
+| |SATLITE 1.2.1
+|*New Features* a|
+* Import parameters from excel file
+* Adapt parameter table to be compatible with TPT
+
+|*Resolved Bugs* a|
+* Excel import feature
+
+|*Deprecated Features* |None
+|===
+====
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.2.1  END TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.2.0 START TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+.*Click here for Changlog - SATLITE 1.2.0*
+[%collapsible]
+====
+
+[width="100%",cols="22%,78%",options="header",]
+|===
+| |SATLITE 1.2.0
+|*New Features* a|
+* Use parameters within timing expressions (e.g. wait, duration, wait until, time out)
+* Import test cases from excel files
+* New keyword to ask test driver for his/her input
+* New test catalogue template for safety functions
+* New checking rules:
+** Warning for negative values in timing expressions
+* Integrate current version of SATLITE in "`About`" section
+* Changed csv export for all test catalogue templates to be compatible with Codebeamer
+
+|*Resolved Bugs* a|
+* Multiline comments in json export
+* Quotes in json export
+* No negative test step numbers
+
+|*Deprecated Features* |None
+|===
+====
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.2.0  END TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.1.1 START TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+.*Click here for Changlog - SATLITE 1.1.1*
+[%collapsible]
+====
+
+[width="100%",cols="22%,78%",options="header",]
+|===
+| |SATLITE 1.1.1
+|*New Features* a|
+* One Alias for multiple test instances
+* Test catalogue template for ACA
+* Test catalogue template for HWP
+
+|*Deprecated Features* a|
+* No equations allowed for defining an Alias; only possible to map Alias to a signal
+
+|*Resolved Bugs* |
+|===
+====
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.1.1  END TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.1.0 START TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+.*Click here for Changlog - SATLITE 1.1.0*
+[%collapsible]
+====
+
+[width="100%",cols="20%,80%",options="header",]
+|===
+| |SATLITE 1.1.0
+|*New Features* a|
+* "`Wait until`" Keyword  (see: <<SATLITEs Language>>)
+* Json & yaml exporter
+* New test catalogue template called "`New Test Catalogue`"
+* Adapted excel export for the test catalogue template "`New Test Catalogue`" to be importable to Codebeamer
+* Automatic update of test step numbering
+* User warning for duplicate test step names
+
+|*Deprecated Features* |-
+|*Resolved Bugs* a|
+* "`Wait`" and "`Duration`" removed from Global Condition
+|===
+====
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.1.0  END TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.0.0 START TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+.*Click here for Changlog - SATLITE 1.0.0*
+[%collapsible]
+====
+
+[width="100%",cols="60%,40%",options="header",]
+|===
+| |SATLITE 1.0.0
+|*New Features* |-
+|*Deprecated Features* |-
+|*Resolved Bugs* |-
+|===
+====
+//////////////////////////////////////////////////////////////////////////////////////////////////
+                               SATLITE 1.0.0  END TABLE of CHANGELOG
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+=== Installation of SATLITE
+
+
+.*Click here for Chapter Overview*
+[%collapsible]
+====
+* <<Quick Facts>>
+* <<Changelog>>
+* <<Installation of SATLITE>>
+** <<System Requirements & Dependencies>>
+** <<Installation Steps>>
+** <<Installation of a Demo Solution>>
+* <<Update SATLITE>>
+====
+
+==== System Requirements & Dependencies
+
+SATLITE requires Java Runtime SDK to function. The tool functions out of the box for most of the computers. In case you encounter errors while going through **"Installation Steps"** section, follow the steps below:
+
+[arabic]
+. Download the latest installation package from https://devstack.vwgroup.com/artifactory/webapp/#/artifacts/browse/simple/General/adapmt-mt7-workflows/Tools/SATLITE_v1.3.0.zip[Artifactory]
+. Unzip the installation package and then unzip "`jbrsdk-11_0_9_1-windows-x64-b1250.2.zip"
+. For Windows OS:
+[loweralpha]
+.. For Windows OS in German:
+[lowerroman]
+... Open path to "`jbrsdk-11_0_9_1-windows-x64-b1250.2.zip2 → jbrsdk`" and copy it +
+_e.g. C:\Projekte\SATLITE\01_SATLITE_v1.1.1\jbrsdk-11_0_9_1-windows-x64-b1250.2\jbrsdk-11_0_9_1-windows-x64-b1250.2\jbrsdk_
+... Search for "`Umgebungsvariablen`" and select "`Umgebungsvariablen für dieses Konto bearbeiten"
+... Add a new variable called "`JAVA_HOME`" and set value as shown below and insert copied path: +
+image:images/chapter1/image2.png[width=362,height=64]
+.. For Windows OS in English:
+[lowerroman]
+... Open path to "`jbrsdk-11_0_9_1-windows-x64-b1250.2.zip2 → jbrsdk`" and copy it +
+_e.g. C:\Projekte\SATLITE\01_SATLITE_v1.1.1\jbrsdk-11_0_9_1-windows-x64-b1250.2\jbrsdk-11_0_9_1-windows-x64-b1250.2\jbrsdk_
+... Search for "`Environmental variables`" and select "` Environmental variables for this account"
+... Add a new variable called "`JAVA_HOME`" and set value as shown in the above screenshot.
+
+==== Installation Steps
+
+
+*Step 1: Download Editor*
+
+If not already done, download the latest version of SATLITE from https://devstack.vwgroup.com/artifactory/webapp/#/artifacts/browse/simple/General/adapmt-mt7-workflows/Tools/SATLITE_v1.2.1.zip[Artifactory] and unzip the files to a local directory.
+
+NOTE: Please save the SATLITE files to a local directory without spaces in the filename that is not connected to OneDrive. *However, it is recommended to save the project files into a directory that is connected to OneDrive.*
+
+
+*Step 2: Starting the Editor*
+
+Navigate to the unzipped folder and open "`bin`" and __double click__ on "`SATLITE-Startup.bat`".
+
+image::images/chapter1/image3_new.png[_scroll_external/attachments/image2021-7-6_14-46-48-90eb99f5e7c2c7c85c7ad6f181468d89c2fcfdfb936c716cea0c2acc440ac970.png,width=350]
+
+Following startup screen appears:
+
+image::images/chapter1/image4.png[width=300]
+
+NOTE: If this step results in an error, follow the steps in <<System Requirements & Dependencies>> to install the dependencies.
+
+
+*Step 3: Create Project & Solution*
+
+Click "`File`" → "`New Project`" and select "`Solution project`".
+
+image::images/chapter1/image5.png[width=300]
+
+Give a proper project name (above: Project1), solution name (above: NewSolution) and click "`OK`". Then, the window shown below appears:
+
+image::images/chapter1/image6.png[width=450]
+
+
+*Step 4: Create Model & Add Devkits*
+
+Right click "`NewSolution`" (or your individual name of solution) and select "`New`" -> "`Model`".
+
+image::images/chapter1/image7.png[width=450]
+
+Give a name to the model and click on "`OK`".
+
+image::images/chapter1/image8.png[width=250]
+
+Click on "`Used Languages`".
+
+image::images/chapter1/image9.png[width=375]
+
+Add devkit by clicking on "`+`".
+
+image::images/chapter1/image10.png[width=375]
+
+Type in "`cariad`" in the module name search bar.
+
+image::images/chapter1/image11.png[width=375]
+
+Select "`tech.cariad.commonlanguage.devkit`" and click "`OK`".
+
+image::images/chapter1/image12.png[width=375]
+
+Click on "`OK`".
+
+image::images/chapter1/image13.png[width=375]
+
+
+*Step 5: Create Test Cases*
+
+Steps to model a test catalogue can be found here: xref:chapter/03_Using_SATLITE.adoc[Using SATLITE].
+
+
+==== Installation of a Demo Solution
+
+The installation can be verified with the following steps:
+
+
+*Step 1: Unzip DemoSolution.zip*
+
+Unzip _DemoSolution.zip_ from the installation package and move it into the project folder.
+
+
+*Step 2: Add Test Catalogue*
+
+Add a test catalogue defined in _DemoSolution.zip_ to Project1 by right clicking "`Project1`" and selecting "`Project Modules`".
+
+image::images/chapter1/image14.png[width=375]
+
+Click "`+`".
+
+image::images/chapter1/image15.png[width=375]
+
+Select "`DemoSolution.msd`" and click "`OK`".
+
+image::images/chapter1/image16_DemoSolution.png[width=375]
+
+Click "`OK`".
+
+image::images/chapter1/image17_DemoSolution.png[width=375]
+
+Example test catalogue with the additional information will appear in the model tree.
+
+image::images/chapter1/image18_DemoSolution.png[width=375]
+
+[[export-generation-step3]]
+*Step 3: Generate Exports*
+
+Right click "`_DemoModel_`" and select "`Rebuild Model DemoSolution.DemoModel.
+
+image::images/chapter1/image19_DemoSolution.png[width=375]
+
+
+// *Step 4: (If appearing) Ignore Errors*
+
+// Please click on *"Ignore Errors"* to generate the export files
+
+// image::images/chapter1/image20.png[width=400]
+
+[[export-generation-step4]]
+*Step 4: Generate XLSX Export*
+
+Click on the test catalogue for which you want to generate the XLSX export.
+Under "`Tools -> Export Excel`" you can trigger the generation of the XLSX export.
+
+image::images/chapter1/image19_xlsx_DemoSolution.png[width=375]
+
+Select the folder to save the XLSX file in.
+
+image::images/chapter1/image19_xlsx_location_DemoSolution.png[width=375]
+
+*Step 5: Verify Export*
+
+Open the folder location "`...\DemoSolution\source_gen\DemoSolution\DemoModel`". The YAML, JSON and ReqIF files appear after successful rebuild and excel export.
+
+image::images/chapter1/image19_export_files_DemoSolution.png[width=300]
+
+image::images/chapter1/image21_DemoSolution.png[width=475]
+
+
+
+=== Update SATLITE
+
+*Step 1:* Download the latest version of SATLITE from https://devstack.vwgroup.com/artifactory/webapp/#/artifacts/browse/simple/General/adapmt-mt7-workflows/Tools/SATLITE_v1.3.0.zip[Artifactory]
+
+*Step 2:* Unzip the folders
+
+*Step 3:* Start SATLITE
+
+*Step 4:* Click on "`Migrate`" on the upcoming pop-up dialog window
+
+A detailed video instruction is shown in the FAQ-Section: xref:chapter/05_FAQ.adoc[FAQ]
